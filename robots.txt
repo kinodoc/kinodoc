@@ -1,5 +1,5 @@
-﻿User-agent: *
-Disallow: /test.html
+User-agent: *
+
 Disallow: /README.md
 Host: https://kinodoc.github.io
 Sitemap: https://kinodoc.github.io/sitemap.xml
