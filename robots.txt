@@ -1,4 +1,2 @@
 User-agent: *
-
-Disallow: /README.md
-Host: https://kinodoc.github.io
+Disallow: /
