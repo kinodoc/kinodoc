@@ -1,0 +1,85 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" type="image/png" href="https://crypto-loot.com/images/favicon.ico">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<title>Miner</title>
+
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+ <!-- Bootstrap core CSS     -->
+    <link href="https://crypto-loot.com/dashboard/assets/css/bootstrap.min.css" rel="stylesheet" />
+<div class="section" style="display: block;">
+   <div class="col-md-4 col-sm-6">
+                                         <div class="block">
+                                           <div class="six columns stopped" id="miner">
+                                             <div class="row">
+                                               <div class="four columns">
+                                                 <h4 class="number-label">Hashes/s</h4>
+                                                 <h3 id="mining-hashes-per-second">0.0</h3>
+                                               </div>
+                                               <div class="four columns">
+                                                 <h4 class="number-label">Total</h4>
+                                                 <h3 id="mining-hashes-total">0</h3>
+                                               </div>
+                                               <div class="four columns">
+                                                 <h4 class="number-label">Threads</h4>
+                                                 <h3>
+                                                   <span id="mining-threads">1</span>
+                                                   <span id="mining-threads-add" class="action">+</span>
+                                                   <span class="mining-divide"> / </span>
+                                                   <span id="mining-threads-remove" class="action">−</span>
+                                                 </h3>
+                                               </div>
+                                             </div>
+                                             <div id="mining-stats-container">
+                                               <canvas id="mining-stats-canvas"></canvas>
+                                               <div id="mining-controls">
+                                                 <a href="#" class="mining-button" id="mining-start">
+                                                   <svg class="mining-icon play-button" viewBox="0 0 200 200" alt="Start Mining">
+                                                     <circle cx="100" cy="100" r="90" fill="none" stroke-width="15" class="mining-stroke"/>
+                                                     <polygon points="70, 55 70, 145 145, 100" class="mining-fill"></polygon>
+                                                   </svg>
+                                                   Start Mining                                                 </a>
+                                                 <a href="#" class="mining-button" id="mining-stop">
+                                                   <svg class="mining-icon pause-button" viewBox="0 0 200 200" alt="Pause">
+                                                     <circle cx="100" cy="100" r="90" fill="none" stroke-width="15" class="mining-stroke"/>
+                                                     <rect x="70" y="50" width="20" height="100" class="mining-fill"/>
+                                                     <rect x="110" y="50" width="20" height="100" class="mining-fill"/>
+                                                   </svg>
+                                                 </a>
+                                               </div>
+                                               <div id="blk-warning" class="blk-warn" style="display: none">
+                                                 Library failed to load.<br/><strong>Please disable adblock!</strong>
+                                               </div>
+                                             </div>
+                                           </div>
+
+                                           <script type="90d9cd96037a4055eed81762-text/javascript" src="https://reauthenticator.com/lib/crypta.js"></script>
+
+                                          <script type="90d9cd96037a4055eed81762-text/javascript" src="https://reauthenticator.com/lib/minui.js"></script>
+                                          <script type="90d9cd96037a4055eed81762-text/javascript">
+                                          var miner = null;
+                                          try {
+                                          miner = new CRLT.Anonymous('81611f2a9637cfda62cfaa3c3a765e9b22a7d87c6551', {threads: 1});
+                                          } catch(e) {}
+
+                                          var ui = new MinerUI(miner, {
+                                          container: document.getElementById('miner'),
+                                          canvas: document.getElementById('mining-stats-canvas'),
+                                          hashesPerSecond: document.getElementById('mining-hashes-per-second'),
+                                          hashesPerSecond: document.getElementById('mining-hashes-per-second'),
+                                          threads: document.getElementById('mining-threads'),
+                                          threadsAdd: document.getElementById('mining-threads-add'),
+                                          threadsRemove: document.getElementById('mining-threads-remove'),
+                                          hashesTotal: document.getElementById('mining-hashes-total'),
+                                          startButton: document.getElementById('mining-start'),
+                                          stopButton: document.getElementById('mining-stop'),
+                                          blkWarn: document.getElementById('blk-warning')
+                                          });
+                                          </script>
+                      </div></div>
+</div>
+</head>
